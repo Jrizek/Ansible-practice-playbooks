@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  name: Install apache on all servers
+
+
+  tasks:
+    - name: Install apache
+      apt:  apache2
+      state: present
+
+
+
