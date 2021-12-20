@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: ubuntu_clients
   name: Install apache on all servers
 
 
