@@ -1,18 +1,17 @@
 ---
 
-- hosts: localhost
-  name: Update Josh's playbook Github repo 
+ - name: Update Josh's playbook Github repo
+   hosts: localhost
 
+   tasks:
+   - name: delete old repo
+     file:
+       path: "/Ansible/Joshua/joshPlaybooks"
+       state: "absent"
 
-  tasks:
-    - name: delete old repo
-        file:
-          path: "/Ansible/Joshua/joshPlaybooks"
-          state: "absent"
-
-  tasks:
-    - name: clone updated github repo 
-        ansible.builtin.git:
-          repo: "https://github.com/Jrizek/Ansible-practice-playbooks.git"
-          dest: "/Ansible/joshPlaybooks"
-          clone: yes
+   - name: clone updated github repo
+     ansible.builtin.git:
+       repo: "https://github.com/Jrizek/Ansible-practice-playbooks.git"
+       dest: "/Ansible/joshPlaybooks"
+       clone: yes
+~                    
