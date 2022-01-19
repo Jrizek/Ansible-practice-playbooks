@@ -1,13 +1,24 @@
 ---
 
-- hosts: ubuntu_clients
-  name: Install apache on all servers
+- hosts: localhost
+  name: Update Josh's playbook Github repo 
 
 
   tasks:
-    - name: Install apache
-      apt:  apache2
-      state: present
+    - name: delete old repo
+        file:
+          path: "/Ansible/Joshua/joshPlaybooks"
+          state: "absent"
+
+  tasks:
+    - name: clone updated github repo 
+        ansible.builtin.git:
+          repo: "https://github.com/Jrizek/Ansible-practice-playbooks.git"
+          dest: "/Ansible/joshPlaybooks"
+          clone: yes
+
+
+
 
 
 
