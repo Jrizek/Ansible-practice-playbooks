@@ -1,0 +1,14 @@
+[controller]
+localhost
+
+[ubuntu_clients]
+ansible-client1.test.local
+ansible-client2.test.local
+
+[centos_clients]
+ansible-client3.test.local
+
+
+[clients:children]
+ubuntu_clients
+centos_clients
