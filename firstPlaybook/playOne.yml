@@ -1,3 +1,12 @@
 ---
 
-- name: download apache onto servers
+- name: "Ping and download apache onto servers"
+  hosts: ubuntu_clients
+
+tasks: 
+
+- name: "test reachability"
+  ping: 
+
+- name: "install stress"
+  homebrew: 
