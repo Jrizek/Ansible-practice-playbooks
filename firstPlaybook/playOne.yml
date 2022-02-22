@@ -9,4 +9,6 @@ tasks:
   ping: 
 
 - name: "install stress"
-  homebrew: 
+  homebrew: stress
+  state: present
+  
