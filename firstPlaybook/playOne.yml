@@ -3,7 +3,7 @@
 - name: "Ping and download apache onto servers"
   hosts: ubuntu_clients
 
-tasks: 
+  tasks: 
 
 - name: "test reachability"
   ping: 
@@ -11,4 +11,3 @@ tasks:
 - name: "install stress"
   homebrew: stress
   state: present
-  
