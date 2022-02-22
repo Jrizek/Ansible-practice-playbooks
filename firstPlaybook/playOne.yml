@@ -5,9 +5,10 @@
 
   tasks: 
 
-- name: "test reachability"
-  ping: 
+    - name: "test reachability"
+      ping: 
 
-- name: "install stress"
-  homebrew: stress
-  state: present
+    - name: "install stress"
+      homebrew: 
+        name: stress
+        state: present
